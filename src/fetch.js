@@ -33,11 +33,11 @@ function render(weather) {
     weather.rain != undefined ? weather.rain["1h"] + " mm" : "No data";
   display.pressure.textContent = weather.main.pressure + "hPa";
   if (display.weather.textContent == "Clear") {
-    document.body.style.backgroundImage = "url(../src/clearsky.jpg)";
+    document.body.style.backgroundImage = "url(./b371820d085f952e13f3.jpg)";
   } else if (display.weather.textContent == "Clouds") {
-    document.body.style.backgroundImage = "url(../src/cloudy.png)";
+    document.body.style.backgroundImage = "url(./391fe57f10df710d21ac.png)";
   } else {
-    document.body.style.backgroundImage = "url(../src/rain.jpg)";
+    document.body.style.backgroundImage = "url(./8d53d61b090e7e3ad51c.jpg)";
   }
 }
 
