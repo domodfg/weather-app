@@ -8,51 +8,68 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <div class="searchBar">
-      <input class ='searchInput' type="text" />
-      <img  class="search" src="../src/magnify.png" alt="">
-      <p class="error"></p>
-    </div>
-    <div class="location"></div>
-    <div class="date"></div>
-    <div class="temperature"></div>
-    <div class="weather"></div>
-    <div class="weatherDes"></div>
-    <div>
-      <h2>Feels like</h2>
-      <p class="feelsLike"></p>
-    </div>
-    <div>
-      <h2>Humidity</h2>
-      <p class="humidity"></p>
-    </div>
-    <div>
-      <h2>Atmospheric pressure</h2>
-      <p class="pressure"></p>
-    </div>
-    <div>
-      <h2>Minimum temperature</h2>
-      <p class="tempMin"></p>
-    </div>
-    <div>
-      <h2>Maximum temperature</h2>
-      <p class="tempMax"></p>
-    </div>
-    <div>
-      <h2>Wind speed</h2>
-      <p class="windSpeed"></p>
-    </div>
-    <div>
-      <h2>visibility</h2>
-      <p class="visibility"></p>
-    </div>
-    <div>
-      <h2>Cloudiness</h2>
-      <p class="cloud"></p>
-    </div>
-    <div>
-      <h2>Rain volume for the last 1 hour</h2>
-      <p class="rain"></p>
+    <div class="container">
+      <div class="header">
+        <div class="searchBar">
+          <input
+            class="searchInput"
+            type="text"
+            placeholder="Search location.."
+          />
+          <img class="search" src="../src/magnify.png" alt="" />
+        </div>
+        <p class="error"></p>
+        <div class="location"></div>
+        <div class="date"></div>
+      </div>
+
+      <div class="infoContainer">
+        <div class="mainInfo">
+          <div class="temperature"></div>
+          <div class="weather"></div>
+          <div class="weatherDes"></div>
+        </div>
+        <div class="extraInfo">
+          <div>
+            <h2>Feels like</h2>
+            <p class="feelsLike"></p>
+          </div>
+          <div>
+            <h2>Min. temp.</h2>
+            <p class="tempMin"></p>
+          </div>
+          <div>
+            <h2>Maxi. temp.</h2>
+            <p class="tempMax"></p>
+          </div>
+          <div>
+            <h2>Humidity</h2>
+            <p class="humidity"></p>
+          </div>
+          <div>
+            <h2>ATM</h2>
+            <p class="pressure"></p>
+          </div>
+
+          <div>
+            <h2>Wind speed</h2>
+            <p class="windSpeed"></p>
+          </div>
+          <div>
+            <h2>visibility</h2>
+            <p class="visibility"></p>
+          </div>
+          <div>
+            <h2>Cloudiness</h2>
+            <p class="cloud"></p>
+          </div>
+          <div>
+            <h2>Rain volume for the last 1 hour</h2>
+            <p class="rain"></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Developed by domodfg&copy</div>
     </div>
   </body>
 </html>

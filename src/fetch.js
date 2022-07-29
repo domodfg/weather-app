@@ -32,10 +32,10 @@ function render(weather) {
   display.rain.textContent =
     weather.rain != undefined ? weather.rain["1h"] + " mm" : "No data";
   display.pressure.textContent = weather.main.pressure + "hPa";
-  if (display.weather.textContent == "Clouds") {
-    document.body.style.backgroundImage = "url(../src/cloudy.png)";
-  } else if (display.weather.textContent == "Clear") {
+  if (display.weather.textContent == "Clear") {
     document.body.style.backgroundImage = "url(../src/clearsky.jpg)";
+  } else if (display.weather.textContent == "Clouds") {
+    document.body.style.backgroundImage = "url(../src/cloudy.png)";
   } else {
     document.body.style.backgroundImage = "url(../src/rain.jpg)";
   }
@@ -47,6 +47,14 @@ const searchBar = (() => {
 
   search.addEventListener("click", () => {
     if (searchInput.value != "") {
+      fetchWeather(searchInput.value, "metric").catch(
+        (err) => (display.error.textContent = err.message)
+      );
+      searchInput.value = "";
+    }
+  });
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
       fetchWeather(searchInput.value, "metric").catch(
         (err) => (display.error.textContent = err.message)
       );
