@@ -32,6 +32,13 @@ function render(weather) {
   display.rain.textContent =
     weather.rain != undefined ? weather.rain["1h"] + " mm" : "No data";
   display.pressure.textContent = weather.main.pressure + "hPa";
+  if (display.weather.textContent == "Clouds") {
+    document.body.style.backgroundImage = "url(../src/cloudy.png)";
+  } else if (display.weather.textContent == "Clear") {
+    document.body.style.backgroundImage = "url(../src/clearsky.jpg)";
+  } else {
+    document.body.style.backgroundImage = "url(../src/rain.jpg)";
+  }
 }
 
 const searchBar = (() => {
